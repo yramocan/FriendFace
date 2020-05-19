@@ -72,15 +72,15 @@
 		B024BA7B24737030009E06D4 /* FriendFace */ = {
 			isa = PBXGroup;
 			children = (
+				B09C2F2F2474967A00F58A19 /* ActiveDotView.swift */,
 				B024BA9B24745A46009E06D4 /* ActivityIndicator.swift */,
 				B024BA7C24737030009E06D4 /* AppDelegate.swift */,
 				B024BA9024737086009E06D4 /* FriendService.swift */,
 				B024BA7E24737030009E06D4 /* SceneDelegate.swift */,
-				B09C2F2A2474887000F58A19 /* Person Detail */,
-				B024BA9824739AF0009E06D4 /* People List */,
 				B024BA94247371B6009E06D4 /* Models */,
+				B024BA9824739AF0009E06D4 /* People List */,
+				B09C2F2A2474887000F58A19 /* Person Detail */,
 				B024BA922473708B009E06D4 /* Resources */,
-				B09C2F2F2474967A00F58A19 /* ActiveDotView.swift */,
 			);
 			path = FriendFace;
 			sourceTree = "<group>";
