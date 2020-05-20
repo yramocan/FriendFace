@@ -11,53 +11,12 @@ struct PersonDetailView: View {
             }
 
             Section(header: Text("General")) {
-                HStack {
-                    Text("Age")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.age)")
-                        .font(.callout)
-                }
-
-                HStack {
-                    Text("Address")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.address)")
-                        .font(.callout)
-                }
-
-                HStack {
-                    Text("Company")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.company)")
-                        .font(.callout)
-                }
-
-                HStack {
-                    Text("Email")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.email)")
-                        .font(.callout)
-                }
-
-                HStack {
-                    Text("Member Since")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.memberSinceDateString)")
-                        .font(.callout)
-                }
-
-                HStack {
-                    Text("Interests")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(viewModel.interests)")
-                        .font(.callout)
-                }
+                infoItem(title: "Age", description: viewModel.ageString)
+                infoItem(title: "Address", description: viewModel.address)
+                infoItem(title: "Company", description: viewModel.company)
+                infoItem(title: "Email", description: viewModel.email)
+                infoItem(title: "Member Since", description: viewModel.memberSinceDateString)
+                infoItem(title: "Interests", description: viewModel.interests)
             }
 
             Section(header: Text("About")) {
@@ -75,6 +34,18 @@ struct PersonDetailView: View {
         .listStyle(GroupedListStyle())
         .onAppear(perform: viewModel.fetchFriends)
         .navigationBarTitle(viewModel.name)
+    }
+
+    private func infoItem(title: String, description: String) -> some View {
+        HStack {
+            Text(title)
+                .font(.headline)
+            Spacer()
+            Text(description)
+                .font(.callout)
+                .lineLimit(2)
+                .multilineTextAlignment(.trailing)
+        }
     }
 }
 

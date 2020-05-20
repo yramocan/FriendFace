@@ -11,7 +11,7 @@ extension PersonDetailView {
 
         var about: String { person.about.trimmingCharacters(in: .whitespacesAndNewlines) }
         var address: String { person.address }
-        var age: Int { person.age }
+        var ageString: String { String(person.age) }
         var company: String { person.company }
         var email: String { person.email }
         var interests: String { person.tags.joined(separator: ", ") }
